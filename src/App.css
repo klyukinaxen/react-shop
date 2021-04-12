@@ -1,6 +1,14 @@
+ * {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    max-width: 980px;
+    display: flex;
+    justify-content: center;
 }
+
 
 
 

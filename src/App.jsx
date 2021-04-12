@@ -1,8 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 import MainPage from "./components/MainPage";
@@ -10,26 +9,15 @@ import CartPage from "./components/CartPage";
 import Header from "./components/Header"
 
 import './App.css';
+import './countres.json';
 
 function App() {
-
-
     return (
         <>
-            <Header />
-            <Router>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Main</Link>
-                            </li>
-                            <li>
-                                <Link to="/cart">Cart</Link>
-                            </li>
-                        </ul>
-                    </nav>
 
+            <Router>
+                <Header />
+                <div>
                     <Switch>
                         <Route path="/" exact>
                             <MainPage />
@@ -43,5 +31,6 @@ function App() {
         </>
     );
 }
+
 
 export default App;

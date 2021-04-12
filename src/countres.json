@@ -1,0 +1,49 @@
+{
+    "countres": [
+        {
+            "name": "Argentina",
+            "info" : "Информация о стране",
+            "dayCost" : "50"
+        },
+        {
+            "name": "Australia",
+            "info" : "Информация о стране",
+            "dayCost" : "150"
+        },
+        {
+            "name": "Bali",
+            "info" : "Информация о стране",
+            "dayCost" : "70"
+        },
+        {
+            "name": "Germany",
+            "info" : "Информация о стране",
+            "dayCost" : "120"
+        },
+        {
+            "name": "Holland",
+            "info" : "Информация о стране",
+            "dayCost" : "100"
+        },
+        {
+            "name": "Iceland",
+            "info" : "Информация о стране",
+            "dayCost" : "180"
+        },
+        {
+            "name": "Norway",
+            "info" : "Информация о стране",
+            "dayCost" : "160"
+        },
+        {
+            "name": "Switzerland",
+            "info" : "Информация о стране",
+            "dayCost" : "160"
+        },
+        {
+            "name": "Tunisia",
+            "info" : "Информация о стране",
+            "dayCost" : "80"
+        }
+    ]
+}

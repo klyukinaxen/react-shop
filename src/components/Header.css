@@ -2,8 +2,17 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around ;
+    justify-content: space-between ;
     align-items: center;
+}
+
+.shopping-cart {
+    background-image: url("assets/shopping-cart.svg");
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
 }
 
 .title {
@@ -11,11 +20,9 @@ header {
     text-transform: uppercase;
 }
 
-.cart {
-        background-image: url("assets/shopping-cart.svg");
-        width: 35px;
-        height: 35px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin: 20px;
+a {
+    text-decoration: none;
+    color: black;
 }
+
+

@@ -1,10 +1,17 @@
 import './Header.css'
+import { Link } from "react-router-dom";
 
 function Header() {
-    return(
+    return (
         <header>
-            <p className="title">choose your trips</p>
-            <div className="cart"> </div>
+            <Link to="/">
+                <p className="title">choose your trips</p>
+            </Link>
+
+            <Link to="/cart">
+                <div className="shopping-cart"></div>
+            </Link>
+
         </header>
     )
 }

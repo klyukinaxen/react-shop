@@ -2,7 +2,8 @@
     display: flex;
     flex: 3;
     flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-direction: row; */
+    align-content: space-around;
     justify-content: center;
 }
 
@@ -10,14 +11,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 80px;
+    margin-top: 40px;
+    margin-right: 60px;
+    justify-content: space-between;
 }
 
 .product-image {
     width: 200px;
     height: 250px;
-    background-color: gray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: gray; */
 }
+
+.product-image.iceland {
+    background-image: url("./Iceland.jpg");
+}
+
+.product-image.germany {
+    background-image: url("./Germany.jpg");
+}
+
+.product-image.argentina {
+    background-image: url("./Argentina.jpg");
+}
+
+.product-image.bali {
+    background-image: url("./Bali.jpg");
+}
+
+.product-image.australia {
+    background-image: url("./Australia.jpg");
+}
+
+.product-image.tunisia {
+    background-image: url("./Tunisia.jpg");
+}
+
+.product-image.holland {
+    background-image: url("./Holland.jpg");
+}
+
+.product-image.norway {
+    background-image: url("./Norway.jpg");
+}
+
+.product-image.switzerland {
+    background-image: url("./Switzerland.jpg");
+}
+
 
 .product-title {
     text-transform: uppercase;
