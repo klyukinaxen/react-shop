@@ -1,7 +1,12 @@
+import "./style.css"
 
+
+// TODO: если корзмна не пустая создавать массив с элементами по принципу (productList в src\components\MainPage\index.jsx)
 function CartPage() {
     return (
-        <div>CartPage</div>
+        <div className="cart-container">
+
+        </div>
     )
 }
 

@@ -1,44 +1,53 @@
+// import countresData from './countres.json';
+import { useState } from 'react'
+
+import { countres } from "./countres.json"
+import InfoIcon from './info.svg'
+
 import './style.css'
 
-function MainPage() {
+/**
+ * TODO: На основе props.cart заменять иконку лобавления в корзину на +- quantity
+ */
+function MainPage(props) {
+    console.log('props', props);
+
+    const [modalInfoIsShow, setModalInfoIsShow] = useState(false)
+
+    const productAdd = (id) => {
+        props.onAddToCart(id);
+    }
+
+    const infoClickHandler = () => {
+        console.log('infoClickHandler');
+    }
+
+    const productList = countres.map(country =>
+        <div className="product" key={country.id.toString()}>
+            <div className={['product-image', country.name.toLowerCase()].join(' ')}></div>
+            <img
+                src={InfoIcon}
+                alt=""
+                className="info"
+                onClick={infoClickHandler}
+            />
+
+            <div className="product-info">
+                <div className="product-title">
+                    {country.name}
+                </div>
+
+                <div
+                    className="product-add"
+                    onClick={() => productAdd(country.id)}
+                ></div>
+            </div>
+        </div>
+    );
+
     return (
         <div className="main-container">
-            <div className="product">
-                <div className="product-image iceland"></div>
-                <div className="product-title">iceland</div>
-            </div>
-            <div className="product">
-                <div className="product-image germany"></div>
-                <div className="product-title">germany</div>
-            </div>
-            <div className="product">
-                <div className="product-image argentina"></div>
-                <div className="product-title">argentina</div>
-            </div>
-            <div className="product">
-                <div className="product-image bali"></div>
-                <div className="product-title">bali</div>
-            </div>
-            <div className="product">
-                <div className="product-image australia"></div>
-                <div className="product-title">australia</div>
-            </div>
-            <div className="product">
-                <div className="product-image tunisia"></div>
-                <div className="product-title">tunisia</div>
-            </div>
-            <div className="product">
-                <div className="product-image holland"></div>
-                <div className="product-title">holland</div>
-            </div>
-            <div className="product">
-                <div className="product-image norway"></div>
-                <div className="product-title">norway</div>
-            </div>
-            <div className="product">
-                <div className="product-image switzerland"></div>
-                <div className="product-title">switzerland</div>
-            </div>
+            {productList}
         </div>
     )
 }

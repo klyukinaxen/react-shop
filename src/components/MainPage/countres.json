@@ -1,0 +1,67 @@
+{
+    "countres": [
+        {
+            "id": 0,
+            "name": "Argentina",
+            "info": "Информация о стране",
+            "dayCost": 50,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Australia",
+            "info": "Информация о стране",
+            "dayCost": 150,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Bali",
+            "info": "Информация о стране",
+            "dayCost": 70,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Germany",
+            "info": "Информация о стране",
+            "dayCost": 120,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Holland",
+            "info": "Информация о стране",
+            "dayCost": 100,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Iceland",
+            "info": "Информация о стране",
+            "dayCost": 180,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Norway",
+            "info": "Информация о стране",
+            "dayCost": 160,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Switzerland",
+            "info": "Информация о стране",
+            "dayCost": 160,
+            "image": "../MainPage/Iceland.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Tunisia",
+            "info": "Информация о стране",
+            "dayCost": 80,
+            "image": "../MainPage/Iceland.jpg"
+        }
+    ]
+}
