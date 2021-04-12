@@ -7,6 +7,7 @@ import {
 
 import MainPage from "./components/MainPage";
 import CartPage from "./components/CartPage";
+import Header from "./components/Header"
 
 import './App.css';
 
@@ -15,10 +16,7 @@ function App() {
 
     return (
         <>
-        <header>
-            {/* logo, text, cart logo */}
-            
-        </header>
+            <Header />
             <Router>
                 <div>
                     <nav>

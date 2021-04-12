@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.cart {
+        background-image: url("assets/shopping-cart.svg");
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 20px;
+}
