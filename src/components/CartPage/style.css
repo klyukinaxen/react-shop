@@ -21,22 +21,49 @@
 .tripAdded {
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 
-.cartPropertes{
+.cart-properties {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
-.cartTripAdd, .cartTripRemove {
+.cost-trip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cost-title{
+    padding: 15px 0;
+}
+
+.cart-trip-add, .cartTripRemove {
     font-size: 24px;
     cursor: pointer;
-    margin: 20px;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.025);
+    border-radius: 50%;
 }
 
-.tripCost{
-    margin: 20px 10px;
+.cart-trip-add span, .cartTripRemove span {
+    line-height: 1em;
+}
+
+.cart-trip-add:hover, .cartTripRemove:hover {
+    /* border: 1px solid rgba(138, 119, 119, 0.5); */
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.trip-cost, .day-quantity {
+    margin: 0 15px;
     font-size: 24px;
 }

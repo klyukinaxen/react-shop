@@ -1,8 +1,5 @@
-//import { countres } from "../MainPage/countres.json"
-
 import "./style.css"
 
-// TODO: если корзмна не пустая создавать массив с элементами по принципу (productList в src\components\MainPage\index.jsx)
 function CartPage(props) {
     console.log('props', props);
 
@@ -25,22 +22,28 @@ function CartPage(props) {
                     {props.name}
                 </div>
             </div>
+            <div className="cost-trip-container">
+                <div className="cost-title"> Days: </div>
+                <div className="cart-properties">
+                    <div
+                        className="cartTripRemove"
+                        onClick={() => findInCart(props.id)}
+                    >
+                        <span>-</span>
+                    </div>
 
-            <div className="cartPropertes">
-                <div
-                    className="cartTripAdd"
-                    onClick={() => addInCart(props.id)}
-                > + </div>
-
-                <div className="tripCost">
-                    {props.quantity * props.dayCost} €
-            </div>
-
-                <div
-                    className="cartTripRemove"
-                    onClick={() => findInCart(props.id)}>
-                    -
+                    <div className="day-quantity">
+                        {props.quantity}
+                    </div>
+                
+                    <div
+                        className="cart-trip-add"
+                        onClick={() => addInCart(props.id)}
+                    >
+                        <span>+</span>
+                    </div>
                 </div>
+                <div className="cost-title"> Final price: {props.quantity * props.dayCost} € </div>
 
             </div>
 

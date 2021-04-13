@@ -8,9 +8,6 @@ import InfoIcon from './info.svg'
 
 import './style.css'
 
-/**
- * TODO: На основе props.cart заменять иконку лобавления в корзину на +- quantity
- */
 function MainPage(props) {
     console.log('props', props);
 
@@ -31,7 +28,6 @@ function MainPage(props) {
         <div className="product" key={country.id.toString()}>
             <div className={classNames(['product-image', country.name.toLowerCase()])}>
                 <img
-                    // hover info fullscreen
                     src={InfoIcon}
                     alt=""
                     className="info"
@@ -72,7 +68,21 @@ function MainPage(props) {
                 className="modal-info"
             >
                 <div>
-                    {JSON.stringify(selectedCountry)}
+                    <div className="image-title">
+                        <div className={classNames(['product-image', selectedCountry.name.toLowerCase()])}>
+                        </div>
+                    </div>
+                    <div className="info-description">
+                        <div className="info-title">
+                            {selectedCountry.name}
+                        </div>
+                        <div className="info-info">
+                            {selectedCountry.info}
+                        </div>
+                        <div className="dayCost-info">
+                            Цена за день: {selectedCountry.dayCost} €
+                    </div>
+                    </div>
                 </div>
             </Modal>
         </>
