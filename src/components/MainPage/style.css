@@ -16,8 +16,6 @@
     margin-right: 60px;
     justify-content: space-between;
     position: relative;
-    z-index: 51;
-
 }
 
 .product-image {
@@ -25,11 +23,9 @@
     height: 250px;
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-color: gray; */
+    z-index: 1;
+    transition: opacity .1s ease;
 }
-
-
-
 
 .info{
     position: absolute;
@@ -41,17 +37,18 @@
     margin: auto;
     cursor: pointer;
     opacity: 0;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
+.product-image:hover .info{
+    opacity: 1;
+}
 .product-image:hover {
     opacity: .6;
 }
 
-.product-image:hover.info{
-    opacity: 1;
-}
+
 
 .product-image.iceland {
     background-image: url("./Iceland.jpg");
@@ -102,11 +99,13 @@
 .product-title {
     text-transform: uppercase;
     font-size: 18px;
+    cursor: default;
 }
 
 .product-add {
     background-image: url("./add-button.svg") ;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 

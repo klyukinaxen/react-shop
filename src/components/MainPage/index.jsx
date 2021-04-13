@@ -24,13 +24,15 @@ function MainPage(props) {
 
     const productList = countres.map(country =>
         <div className="product" key={country.id.toString()}>
-            <div className={['product-image', country.name.toLowerCase()].join(' ')}></div>
-            <img
-                src={InfoIcon}
-                alt=""
-                className="info"
-                onClick={infoClickHandler}
-            /> 
+            <div className={['product-image', country.name.toLowerCase()].join(' ')}>
+                <img
+                    // hover info fullscreen
+                    src={InfoIcon}
+                    alt=""
+                    className="info"
+                    onClick={infoClickHandler}
+                />
+            </div>
 
             <div className="product-info">
                 <div className="product-title">
@@ -40,7 +42,8 @@ function MainPage(props) {
                 <div
                     className="product-add"
                     onClick={() => productAdd(country.id)}
-                ></div>
+                >
+                </div>
             </div>
         </div>
     );

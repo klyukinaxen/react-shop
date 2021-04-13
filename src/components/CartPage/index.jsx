@@ -51,15 +51,21 @@ function CartPage(props) {
                 </div>
             </div>
 
-            <div
-                className="cartTripAdd"
-                onClick={() => addInCart(props.id)}
-            > + </div>
+            <div className="cartPropertes">
+                <div
+                    className="cartTripAdd"
+                    onClick={() => addInCart(props.id)}
+                > + </div>
 
-            <div
-                className="cartTripRemove"
-                onClick={() => findInCart(props.id)}>
-                -
+                <div className="tripCost">
+                    {props.quantity * props.dayCost} €
+            </div>
+
+                <div
+                    className="cartTripRemove"
+                    onClick={() => findInCart(props.id)}>
+                    -
+            </div>
             </div>
 
         </div>
