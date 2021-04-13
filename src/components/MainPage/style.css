@@ -16,6 +16,7 @@
     margin-right: 60px;
     justify-content: space-between;
     position: relative;
+    z-index: 51;
 
 }
 
@@ -28,23 +29,28 @@
 }
 
 
+
+
 .info{
     position: absolute;
-    /* z-index: 2;
+    z-index: 2;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
     cursor: pointer;
-    opacity: 0; */
+    opacity: 0;
     width: 30px;
     height: 30px;
 }
 
 .product-image:hover {
-    color: black;
     opacity: .6;
+}
+
+.product-image:hover.info{
+    opacity: 1;
 }
 
 .product-image.iceland {

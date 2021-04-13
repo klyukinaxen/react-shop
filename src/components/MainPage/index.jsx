@@ -30,7 +30,7 @@ function MainPage(props) {
                 alt=""
                 className="info"
                 onClick={infoClickHandler}
-            />
+            /> 
 
             <div className="product-info">
                 <div className="product-title">

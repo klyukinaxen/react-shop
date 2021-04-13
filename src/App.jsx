@@ -35,6 +35,15 @@ function App() {
         setCart(newCart)
     }
 
+    const deleteFromCart = (id) => {
+        let newCart = [...cart]
+        let inCart = newCart.find(cartItem => cartItem.id === id)
+        inCart.quantity -= 1;
+        newCart = newCart.filter(inCart => inCart.quantity > 0);
+
+        setCart(newCart)
+    }
+
     return (
         <Router>
             <Header />
@@ -50,7 +59,11 @@ function App() {
                         />
                     </Route>
                     <Route path="/cart">
-                        <CartPage />
+                        <CartPage
+                            cart={cart}
+                            onAddToCart={onAddToCart}
+                            deleteFromCart={deleteFromCart}
+                        />
                     </Route>
                 </Switch>
             </div>
