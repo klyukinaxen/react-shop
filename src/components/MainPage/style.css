@@ -27,7 +27,7 @@
     transition: opacity .1s ease;
 }
 
-.info{
+.info {
     position: absolute;
     z-index: 2;
     left: 0;
@@ -41,14 +41,13 @@
     height: 50px;
 }
 
-.product-image:hover .info{
+.product-image:hover .info {
     opacity: 1;
 }
+
 .product-image:hover {
     opacity: .6;
 }
-
-
 
 .product-image.iceland {
     background-image: url("./Iceland.jpg");
@@ -93,7 +92,6 @@
     align-items: center;
     width: 100%;
     margin-top: 15px;
-
 }
 
 .product-title {
@@ -103,9 +101,30 @@
 }
 
 .product-add {
-    background-image: url("./add-button.svg") ;
+    background-image: url("./add-button.svg");
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
+.modal-info-backdrop {
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+  
+}
+
+.modal-info {
+    position: fixed;
+    width: 400px;
+    z-index: 1040;
+    border: 1px solid #e5e5e5;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}

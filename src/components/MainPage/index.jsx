@@ -1,5 +1,7 @@
 // import countresData from './countres.json';
 import { useState } from 'react'
+import Modal from 'react-overlays/Modal'
+import classNames from 'classnames';
 
 import { countres } from "./countres.json"
 import InfoIcon from './info.svg'
@@ -13,24 +15,27 @@ function MainPage(props) {
     console.log('props', props);
 
     const [modalInfoIsShow, setModalInfoIsShow] = useState(false)
+    const [selectedCountryId, setSelectedCountryId] = useState(0)
 
     const productAdd = (id) => {
         props.onAddToCart(id);
     }
 
-    const infoClickHandler = () => {
-        console.log('infoClickHandler');
+    const infoClickHandler = (countryId) => {
+        console.log('infoClickHandler', countryId);
+        setSelectedCountryId(countryId)
+        setModalInfoIsShow(true)
     }
 
     const productList = countres.map(country =>
         <div className="product" key={country.id.toString()}>
-            <div className={['product-image', country.name.toLowerCase()].join(' ')}>
+            <div className={classNames(['product-image', country.name.toLowerCase()])}>
                 <img
                     // hover info fullscreen
                     src={InfoIcon}
                     alt=""
                     className="info"
-                    onClick={infoClickHandler}
+                    onClick={() => infoClickHandler(country.id)}
                 />
             </div>
 
@@ -48,10 +53,29 @@ function MainPage(props) {
         </div>
     );
 
+    const selectedCountry = countres.find(country => country.id === selectedCountryId)
+
+    const renderBackdrop = (props) => (
+        <div className="modal-info-backdrop" {...props}></div>
+    )
+
     return (
-        <div className="main-container">
-            {productList}
-        </div>
+        <>
+            <div className="main-container">
+                {productList}
+            </div>
+
+            <Modal
+                show={modalInfoIsShow}
+                onHide={() => setModalInfoIsShow(false)}
+                renderBackdrop={renderBackdrop}
+                className="modal-info"
+            >
+                <div>
+                    {JSON.stringify(selectedCountry)}
+                </div>
+            </Modal>
+        </>
     )
 }
 

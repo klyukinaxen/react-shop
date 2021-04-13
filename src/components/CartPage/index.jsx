@@ -2,31 +2,6 @@
 
 import "./style.css"
 
-
-// function notEmpty() {
-// if (param.quantity > 0) {
-//     const productList = countres.map(country =>
-//         <div className="cartProduct-container"> 
-
-//             <div className="cartProduct">
-//                 <div className={['cartProduct', country.name.toLowerCase()].join(' ')}></div>
-//                 <div className="product-title">
-//                     {country.name}
-//                 </div>
-//             </div>
-
-//             <div className="cart-property">
-//                 <p>-</p>
-//                 <p>{country.dayCost * param.quantity}</p>
-//                 <p>+</p>
-//             </div>
-
-//         </div>
-//     );
-// }
-
-// }
-
 // TODO: если корзмна не пустая создавать массив с элементами по принципу (productList в src\components\MainPage\index.jsx)
 function CartPage(props) {
     console.log('props', props);
@@ -42,8 +17,8 @@ function CartPage(props) {
     }
 
     const productList = props.cart.map(props =>
-        <div className="cartTrip" key={props.id.toString()}>
 
+        <div className="cartTrip" key={props.id.toString()}>
             <div className="tripAdded">
                 <div className={['product-image', props.name.toLowerCase()].join(' ')}></div>
                 <div className="product-title">
@@ -65,13 +40,14 @@ function CartPage(props) {
                     className="cartTripRemove"
                     onClick={() => findInCart(props.id)}>
                     -
-            </div>
+                </div>
+
             </div>
 
         </div>
     );
 
-    const emptyCart = <h2>Корзина пуста</h2>
+    const emptyCart = <h2> Cart is empty! Choose your trip ;)</h2>;
 
 
     if (props.cart.length > 0) {
